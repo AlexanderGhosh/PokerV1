@@ -71,7 +71,11 @@ function preload() {
 function setup() {
   createCanvas(...DIM).parent('jimbo');
 }
+<<<<<<< HEAD
 
+=======
+// 114.285, 178.5
+>>>>>>> c1c6adb512eb17f1ea16413e8f46101a22dae959
 function draw() {
   background(50);
   const pos = [0, 0];
