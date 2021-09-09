@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 8000;
+const port = process.env.NODE_ENV | 8000;
 
 app.use(express.static(__dirname + '/static'));
 
