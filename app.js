@@ -6,8 +6,7 @@ const port = process.env.PORT || 8000;
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res){
-  // res.sendFile(__dirname + '/src/index.html');
-  res.send('giu');
+  res.sendFile(__dirname + '/src/index.html');
 });
 
 app.listen(port, () => {
