@@ -6,7 +6,8 @@ const port = 8000;
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/src/index.html');
+  // res.sendFile(__dirname + '/src/index.html');
+  res.send('giu');
 });
 
 app.listen(port, () => {
