@@ -76,7 +76,7 @@ function draw() {
   background(50);
   const pos = [0, 0];
   const dim = [cards.width / 14, cards.height / 4];
-  let card = CARDS.Hearts.King
+  let card = CARDS.Hearts.Ace
   let slice = [dim[0] * card[0], dim[1] * card[1]];
   slice[2] = dim[0];
   slice[3] = dim[1];
