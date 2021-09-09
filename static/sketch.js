@@ -1,5 +1,7 @@
 let cards;
-const DIM = [1800, 750];
+let cardBack;
+let bg;
+const DIM = [1750, 750];
 
 const CARDS = {
   Clubs: {
@@ -66,6 +68,8 @@ const CARDS = {
 
 function preload() {
   cards = loadImage('./assets/cards/AllCards.jpg');
+  cardBack = loadImage('./assets/cards/CardBack.png');
+  bg = loadImage('./assets/Background.png');
 }
 
 function setup() {
@@ -74,12 +78,15 @@ function setup() {
 
 function draw() {
   background(50);
+  image(bg, 0, 0);
   const pos = [0, 0];
   const dim = [cards.width / 14, cards.height / 4];
-  let card = CARDS.Hearts.Ace
+  let card = CARDS.Hearts.Ace;
   let slice = [dim[0] * card[0], dim[1] * card[1]];
   slice[2] = dim[0];
   slice[3] = dim[1];
-
+  console.log(dim + '\r');
   image(cards, ...pos, ...dim, ...slice);
+
+  image(cardBack, ...pos, ...dim);
 }
