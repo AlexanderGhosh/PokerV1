@@ -9,6 +9,10 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/src/index.html');
 });
 
+app.get('/*.ico', function(req, res) {
+  res.sendFile('/static/assets/cards/CardBack.png');
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
 });
